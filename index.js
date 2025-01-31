@@ -1,13 +1,3 @@
-
-
-/*
-getComputerChoice -> PSEUDOCODE:
-    1. Math.random() produces a random floating point number between 0 and 1;
-    2. Using the formula (randomnum * (max - min)) + min; we get random output in range 1 to 3;
-    3. 
-*/
-
-
 function getComputerChoice(){
     let randoChoice = Math.floor(Math.random() * (3 - 0)) + 1;
 
