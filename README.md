@@ -1,0 +1,1 @@
+This is a console based Rock-Paper-Scissor game made using javasctipt in order to get familiarized with JS functions and syntax.
