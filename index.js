@@ -44,20 +44,19 @@ function playRound(humanChoice, computerChoice){
     }
     
     else if(humanChoice === "scissors"){
-        if(computerChoice === "paper" )
+        if(computerChoice === "paper")
             return "human";
         else
             return "computer";
     }
 }
 
-function playGame(){
-    for(let i = 0; i < 5; i++){
+function playGame(humanChoice){
+    //for(let i = 0; i < 5; i++){
 
-        const humanChoice = getHumanChoice();
+        // const humanChoice = getHumanChoice();
         const computerChoice = getComputerChoice();
         
-
         let result = playRound(humanChoice, computerChoice);
 
         if (result === "tie"){
@@ -68,15 +67,86 @@ function playGame(){
             computerScore++;
         }else
             humanScore++;
+        
+
+        //Display Selections
+        const hSelection = document.querySelector(".cSelection")
+        hSelection.textContent = `${computerChoice}`;
+
+        const cSelection = document.querySelector(".hSelection")
+        cSelection.textContent = `${humanChoice}`;
+        
+
+        //Displays Score    
+        const cScore = document.querySelector(".spanOne")
+        cScore.textContent = `${computerScore}`;
+
+        const hScore = document.querySelector(".spanTwo")
+        hScore.textContent = `${humanScore}`;
+
+
+
+        //Declares Winner after 5 Points Earned
+        if(computerScore === 5 && flag === 0){
+            flag = 1;
+
+            const result = document.querySelector(".resultPara");
+            result.textContent = "Computer Wins!";
+            result.setAttribute("style", "color: Red; fontWeight: bolder;");
+
+        }else if(humanScore === 5 && flag === 0){
+            flag = 1;
+            const result = document.querySelector(".resultPara");
+            result.textContent = "Human Wins!";
+            result.setAttribute("style", "color: Blue; fontWeight: bolder;");
+            
+        }
 
         console.log(`Human Score: ` + humanScore);
         console.log(`Computer Score: ` + computerScore);
-    }
+    //}
+
+    // if(flag === 1){
+    //     flag = 0;
+    //     const resetDiv = document.querySelector(".resetDiv");
+    //     const resetBut = document.createElement("button");
+    //     resetBut.textContent = "RESET";
+    //     resetDiv.appendChild(resetBut);
+    // }
 }
 
-
+let flag = 0;
 
 let computerScore = 0;
 let humanScore = 0;
 
-playGame();
+
+
+
+
+
+
+
+let rock = document.querySelector(".rock");
+let paper = document.querySelector(".paper");
+let scissors = document.querySelector(".scissors");
+
+
+
+rock.addEventListener("click", () => {
+    playGame("rock");
+});
+
+paper.addEventListener("click", () => {
+    playGame("paper");
+});
+
+scissors.addEventListener("click", () => {
+    playGame("scissors");
+});
+
+
+
+
+
+//playGame();
