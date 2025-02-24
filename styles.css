@@ -1,0 +1,121 @@
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 72px;
+    list-style-type: none;
+}
+
+body{
+    background-color: aliceblue;
+}
+.result{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 72px;
+}
+
+.resultPara{
+    font-size: 32px;
+
+}
+
+
+.scoreBoard{
+    display: flex;
+    justify-content: center;
+    gap: 72px;
+    background-color: antiquewhite;
+    margin-bottom: 12px;
+}
+
+.currentSelections{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 52px;
+    margin-bottom: 72px;
+
+}
+
+.humanSelDiv,.computerSelDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    
+}
+
+.humanSelDiv{
+    border-radius: 12px;
+    width: 150px;
+    background-color: rgb(54, 124, 180);
+    
+}
+
+.computerSelDiv{
+    border-radius: 12px;
+    width: 150px;
+    background-color: rgb(247, 82, 82);
+}
+.cSelection,.hSelection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: white;
+    width: 140px;
+    height: 50px;
+    /* padding: 4px 4px; */
+    color: black;
+    font-size: x-large;
+    margin-top: 12px;
+}
+
+.versus{
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.cScore, .hScore{
+    padding: 4px;
+    /* border:solid 2px; */
+}
+
+.spanOne, .spanTwo{
+    font-weight:bolder;
+}
+
+button{
+    font-size: xx-large;
+    border-radius: 8px;
+    border-width: 0px;
+    padding: 18px;
+    font-size: xx-large;
+}
+
+.rock{
+    background-color: rgb(155, 137, 170);
+    color: white;
+}
+
+.paper{
+    background-color: rgb(231, 225, 219);
+    color: rgb(17, 15, 15);
+
+}
+
+.scissors{
+    background-color: rgb(114, 190, 95);
+    color: rgb(255, 255, 255);
+    
+}
+
+.lineOne{
+    
+    border: 0.5pt solid rgb(181, 192, 188);
+    
+    margin-bottom: 42px;
+}
